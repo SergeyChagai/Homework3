@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _2_maximal_number
+namespace _4_index_max
 {
     class Program
     {
@@ -10,21 +10,26 @@ namespace _2_maximal_number
             while (true)
             {
                 //ввод чисел массива
-                Console.WriteLine("Введите 4 числа");
-                int[] numbers = new int[4];
+                int n = 7;
+                Console.WriteLine($"Введите {n} чисел");
+                int[] numbers = new int[n];
 
                 //перебор массива
                 for (int number = 0; number < numbers.Length; number++)
                     numbers[number] = Convert.ToInt32(Console.ReadLine());
-                int rep = numbers[0];
+                int rep = 0;
+                int temp = numbers[0];
                 for (int i = 0; i < numbers.Length; i++)
                 {
-                    if (numbers[i] > rep)
-                        rep = numbers[i];
+                    if (numbers[i] > temp)
+                    {
+                        temp = numbers[i];
+                        rep = i;
+                    }
                 }
 
                 //вывод максимального числа
-                Console.WriteLine($"Максимальное число - {rep}");
+                Console.WriteLine($"Индекс максимального числа - {rep + 1}");
             }
         }
     }
