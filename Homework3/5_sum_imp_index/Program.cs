@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _4_index_max
+namespace _5_sum_imp_index
 {
     class Program
     {
@@ -10,7 +10,7 @@ namespace _4_index_max
             while (true)
             {
                 //ввод чисел массива
-                int n = 7;
+                int n = 4;
                 Console.WriteLine($"Введите {n} чисел");
                 int[] numbers = new int[n];
                 for (int number = 0; number < numbers.Length; number++)
@@ -28,9 +28,8 @@ namespace _4_index_max
                     }
                 }
 
-                //вывод максимального числа
-                Console.WriteLine($"Индекс максимального числа - {rep + 1}");
+                //вывод результата
+                Console.WriteLine($"Сумма элементов массива с нечетными индексами - {rep}");
             }
-        }
     }
 }

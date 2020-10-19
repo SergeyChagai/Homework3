@@ -12,10 +12,10 @@ namespace _2_maximal_number
                 //ввод чисел массива
                 Console.WriteLine("Введите 4 числа");
                 int[] numbers = new int[4];
-
-                //перебор массива
                 for (int number = 0; number < numbers.Length; number++)
                     numbers[number] = Convert.ToInt32(Console.ReadLine());
+
+                //перебор массива
                 int rep = numbers[0];
                 for (int i = 0; i < numbers.Length; i++)
                 {
