@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6_Reverse", "6_Reverse\6_Re
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7_num_of_impair", "7_num_of_impair\7_num_of_impair.csproj", "{1DE35DE5-48E6-47BD-9916-1243D5170F76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8_half_swap", "8_half_swap\8_half_swap.csproj", "{D57DD0C5-B627-4D15-8262-9A53E7E3F7A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{1DE35DE5-48E6-47BD-9916-1243D5170F76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DE35DE5-48E6-47BD-9916-1243D5170F76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DE35DE5-48E6-47BD-9916-1243D5170F76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D57DD0C5-B627-4D15-8262-9A53E7E3F7A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D57DD0C5-B627-4D15-8262-9A53E7E3F7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D57DD0C5-B627-4D15-8262-9A53E7E3F7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D57DD0C5-B627-4D15-8262-9A53E7E3F7A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
