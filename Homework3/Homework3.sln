@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7_num_of_impair", "7_num_of
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8_half_swap", "8_half_swap\8_half_swap.csproj", "{D57DD0C5-B627-4D15-8262-9A53E7E3F7A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9_sort", "9_sort\9_sort.csproj", "{D52623D2-2E4A-4F6B-A3CC-F7CE36BF65D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "9_sort_increase", "9_sort\9_sort_increase.csproj", "{D52623D2-2E4A-4F6B-A3CC-F7CE36BF65D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
