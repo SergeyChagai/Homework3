@@ -18,18 +18,12 @@ namespace _5_sum_imp_index
 
                 //перебор массива
                 int rep = 0;
-                int temp = numbers[0];
-                for (int i = 0; i < numbers.Length; i++)
-                {
-                    if (numbers[i] > temp)
-                    {
-                        temp = numbers[i];
-                        rep = i;
-                    }
-                }
+                for (int i = 0; i < numbers.Length; i += 2)
+                    rep += numbers[i];
 
                 //вывод результата
                 Console.WriteLine($"Сумма элементов массива с нечетными индексами - {rep}");
             }
+        }
     }
 }
