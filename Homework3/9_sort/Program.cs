@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _9_sort
+namespace _9_sort_increase
 {
     class Program
     {
