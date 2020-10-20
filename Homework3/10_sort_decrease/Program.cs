@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _9_sort
+namespace _10_sort_decrease
 {
     class Program
     {
@@ -15,23 +15,16 @@ namespace _9_sort
                 int[] numbers = new int[n];
                 for (int number = 0; number < numbers.Length; number++)
                     numbers[number] = Convert.ToInt32(Console.ReadLine());
+                int temp;
 
-                //перебор массива выбором
-                for (int i = 0; i < numbers.Length; i++)
-                {
-                    int temp;
-                    for (int j = 0; j < numbers.Length; j++)
+                //перебор массива вставкой
+                for (int i = 1; i < numbers.Length; i++)
+                    for (int j = i; j > 0 && numbers[j - 1] < numbers[j]; j--)
                     {
-                        if (numbers[i] >= numbers[j])
-                            continue;
-                        else
-                        {
-                            temp = numbers[i];
-                            numbers[i] = numbers[j];
-                            numbers[j] = temp;
-                        }
+                        temp = numbers[j - 1];
+                        numbers[j - 1] = numbers[j];
+                        numbers[j] = temp;
                     }
-                }
 
                 //вывод результата
                 foreach (int num in numbers)
