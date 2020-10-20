@@ -34,3 +34,18 @@ namespace _10_sort_decrease
         }
     }
 }
+/*  Можно использовать Random
+ *  
+ *  int a[] = new int[n]
+ *  
+ *  Random r = new Random()
+ *  
+ *  for (int i = 0; i < a.Length; i++)
+ *  {
+ *      a[i] = r.Next(-100, 100);
+ *      Console.WriteLine(a[i] + " ");
+ *  }
+ *  
+ *  
+ *  
+ */
