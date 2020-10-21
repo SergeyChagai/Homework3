@@ -30,18 +30,18 @@ namespace _2_max_num
                     Console.WriteLine();
                 }
 
-                int min = tab[0, 0];
+                int max = tab[0, 0];
                 for (int i = 0; i < tab.GetLength(0); i++)
                 {
                     for (int j = 0; j < tab.GetLength(1); j++)
                     {
-                        if (tab[i, j] < min)
-                            min = tab[i, j];
+                        if (tab[i, j] > max)
+                            max = tab[i, j];
                     }
                 }
 
                 Console.WriteLine("---------------------------------------------------");
-                Console.WriteLine($"Минимальное число в таблице: {min}");
+                Console.WriteLine($"Максимальное число в таблице: {max}");
             }
         }
     }
