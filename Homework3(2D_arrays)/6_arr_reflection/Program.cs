@@ -15,7 +15,7 @@ namespace _6_arr_reflection
 
                 if (c == 1 || s == 1)
                 {
-                    Console.WriteLine("Таблица не может состоять из одного(-ой) элемента строки/строки.");
+                    Console.WriteLine("Таблица не может состоять из одной строки/элемента строки.");
                     continue;
                 }
                 int[,] arr = new int[s, c];
