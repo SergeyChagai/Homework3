@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "4_index_max", "4_index_max\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5_local_max", "5_local_max\5_local_max.csproj", "{A63803B2-8F7C-4E5B-9701-F59F7914B6B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "6_arr_reflection", "6_arr_reflection\6_arr_reflection.csproj", "{9127B6ED-F0D7-406A-ADE7-0405FDE57ADD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A63803B2-8F7C-4E5B-9701-F59F7914B6B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A63803B2-8F7C-4E5B-9701-F59F7914B6B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A63803B2-8F7C-4E5B-9701-F59F7914B6B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9127B6ED-F0D7-406A-ADE7-0405FDE57ADD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9127B6ED-F0D7-406A-ADE7-0405FDE57ADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9127B6ED-F0D7-406A-ADE7-0405FDE57ADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9127B6ED-F0D7-406A-ADE7-0405FDE57ADD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
