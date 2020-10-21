@@ -35,6 +35,7 @@ namespace _6_arr_reflection
                     Console.WriteLine("\n");
                 }
 
+                int[,] arr2 = new int[c, s];
                 for (int i = 0; i < arr.GetLength(1); i++)
                 {
                     for (int j = i + 1; j < arr.GetLength(0); j++)
