@@ -82,7 +82,15 @@ namespace _6_arr_reflection
                 }
                 else
                 {
-
+                    for (int i = 0; i < arr.GetLength(1); i++)
+                    {
+                        for (int j = i + 1; j < arr.GetLength(0); j++)
+                        {
+                            int temp = arr[i, j];
+                            arr[i, j] = arr[j, i];
+                            arr[j, i] = temp;
+                        }
+                    }
                 }
                 Console.WriteLine("----------------------------------------------\n");
                 for (int i = 0; i < y; i++)
