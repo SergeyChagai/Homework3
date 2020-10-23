@@ -19,18 +19,20 @@ namespace _6_arr_reflection
                     continue;
                 }
                 int[,] arr = new int[s, c];
+               
                 Random r = new Random();
 
                 for (int i = 0; i < arr.GetLength(0); i++)
                 {
                     for (int j = 0; j < arr.GetLength(1); j++)
                     {
-                        arr[i, j] = r.Next(-100, 100);
-                        if ((arr[i, j] > 0 && arr[i, j] / 10 != 0) || (arr[i, j] < 0 && ((arr[i, j] * -1) / 10) == 0))   //для более-менее красивого вывода
+                        arr[i, j] = r.Next(-100, 99);
+                        int current = arr[i, j];
+                        if ((current > 0 && current / 10 != 0) || (current < 0 && ((current * -1) / 10) == 0))   //для более-менее красивого вывода
                             Console.Write(" ");
-                        else if (arr[i, j] >= 0 && arr[i, j] / 10 == 0)
+                        else if (current >= 0 && current / 10 == 0)
                             Console.Write("  ");
-                        Console.Write($"{arr[i, j]} ");
+                        Console.Write($"{current} ");
                     }
                     Console.WriteLine("\n");
                 }
@@ -49,11 +51,12 @@ namespace _6_arr_reflection
                 {
                     for (int j = 0; j < x; j++)
                     {
-                        if ((arr2[i, j] > 0 && arr2[i, j] / 10 != 0) || (arr2[i, j] < 0 && ((arr2[i, j] * -1) / 10) == 0))   //для более-менее красивого вывода
+                        int current = arr2[i, j];
+                        if ((current > 0 && current / 10 != 0) || (current < 0 && ((current * -1) / 10) == 0))   //для более-менее красивого вывода
                             Console.Write(" ");
-                        else if (arr2[i, j] >= 0 && arr2[i, j] / 10 == 0)
+                        else if (current >= 0 && current / 10 == 0)
                             Console.Write("  ");
-                        Console.Write($"{arr2[i, j]} ");
+                        Console.Write($"{current} ");
                     }
                     Console.WriteLine("\n");
                 }
