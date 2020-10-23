@@ -12,6 +12,7 @@ namespace _5_local_max
                 int c = Convert.ToInt32(Console.ReadLine());
                 Console.Write("Введите количество элементов в строках таблицы: ");
                 int s = Convert.ToInt32(Console.ReadLine());
+                int rep = 0;
 
                 if (c == 1 || s == 1)
                 {
@@ -32,7 +33,7 @@ namespace _5_local_max
                             Console.Write("  ");
                         Console.Write($"{arr[i, j]} ");
                     }
-                    Console.WriteLine();
+                    Console.WriteLine("\n");
                 }
 
                 Console.Write("Числа, максимальные среди своих соседей: ");
@@ -40,63 +41,19 @@ namespace _5_local_max
                 {
                     for (int j = 0; j < arr.GetLength(1); j++)
                     {
-                        if (i > 0 && i < arr.GetLength(0) - 1)          //общий случай для строк
+                        bool left = (j != 0 && arr[i, j] > arr[i, j - 1]) || j == 0;
+                        bool right = (j != arr.GetLength(1) - 1 && arr[i, j] > arr[i, j + 1]) || j == arr.GetLength(1) - 1;
+                        bool up = (i != 0 && arr[i, j] > arr[i - 1, j]) || i == 0;
+                        bool down = (i != arr.GetLength(0) - 1 && arr[i, j] > arr[i + 1, j]) || i == arr.GetLength(0) - 1;
+                        if (left && right && up && down)
                         {
-                            if (j > 0 && j < arr.GetLength(1) - 1)      //общий случай для элементов строки
-                            {
-                                if (arr[i, j] > arr[i, j - 1] && arr[i, j] > arr[i, j + 1] && arr[i, j] > arr[i - 1, j] && arr[i, j] > arr[i + 1, j])
-                                    Console.Write($"{arr[i, j]}, ");
-                            }
-                            else if (j == 0)                            //если строки в середине, но элемент крайний левый
-                            {
-                                if (arr[i, j] > arr[i, j + 1] && arr[i, j] > arr[i - 1, j] && arr[i, j] > arr[i + 1, j])
-                                    Console.Write($"{arr[i, j]}, ");
-                            }
-                            else if (j == arr.GetLength(1) - 1)         //если строки в середине, но элемент крайний правый
-                            {
-                                if (arr[i, j] > arr[i, j - 1] && arr[i, j] > arr[i - 1, j] && arr[i, j] > arr[i + 1, j])
-                                    Console.Write($"{arr[i, j]}, ");
-                            }
-                        }
-                        else if (i == 0)                                //если строка сверху
-                        {
-                            if (j > 0 && j < arr.GetLength(1) - 1)
-                            {
-                                if (arr[i, j] > arr[i, j - 1] && arr[i, j] > arr[i, j + 1]  && arr[i, j] > arr[i + 1, j])
-                                    Console.Write($"{arr[i, j]}, ");
-                            }
-                            else if (j == 0)
-                            {
-                                if (arr[i, j] > arr[i, j + 1] && arr[i, j] > arr[i + 1, j])
-                                    Console.Write($"{arr[i, j]}, ");
-                            }
-                            else if (j == arr.GetLength(1) - 1)
-                            {
-                                if (arr[i, j] > arr[i, j - 1] && arr[i, j] > arr[i + 1, j])
-                                    Console.Write($"{arr[i, j]}, ");
-                            }
-                        }
-                        else if (i == arr.GetLength(0) - 1)             //если строка снизу
-                        {
-                            if (j > 0 && j < arr.GetLength(1) - 1)
-                            {
-                                if (arr[i, j] > arr[i, j - 1] && arr[i, j] > arr[i, j + 1] && arr[i, j] > arr[i - 1, j])
-                                    Console.Write($"{arr[i, j]}, ");
-                            }
-                            else if (j == 0)
-                            {
-                                if (arr[i, j] > arr[i, j + 1] && arr[i, j] > arr[i - 1, j])
-                                    Console.Write($"{arr[i, j]}, ");
-                            }
-                            else if (j == arr.GetLength(1) - 1)
-                            {
-                                if (arr[i, j] > arr[i, j - 1] && arr[i, j] > arr[i - 1, j])
-                                    Console.Write($"{arr[i, j]}, ");
-                            }
+                            rep++;
+                            Console.Write($"{arr[i, j]} ");
                         }
                     }
                 }
                 Console.WriteLine();
+                Console.WriteLine($"Всего {rep}");
             }
         }
     }
